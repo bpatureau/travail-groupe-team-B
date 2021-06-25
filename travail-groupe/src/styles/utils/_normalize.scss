@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 1;
+  border: none;
+  background-color: transparent;
+
+  font-family: $font--1;
+}
+
+body{
+  overflow-x: hidden;
+  color: $black;
+}

@@ -1,0 +1,21 @@
+/* set a classic grid-column + corresponding width and add width to reach the edge of the screen*/
+/* I have to rework on it, please don't mind for the moment */
+/* @mixin gridOverflow($gridStart, $gridEnd){
+    grid-column-start: $gridStart;
+    grid-column-end: $gridEnd;
+
+    width: calc(#{$mobileSidePadding} + (#{$mobileColumnWidth} * (#{$gridEnd} - #{$gridStart})) + (#{$mobileColumnGap} * (#{$gridEnd} - #{$gridStart} - 1)));
+
+    @media (min-width: $tabletBP){
+        width: calc(#{$tabletSidePadding} + (#{$tWidth} * (#{$gridEnd} - #{$gridStart})) + (#{$tabletColumnGap} * (#{$gridEnd} - #{$gridStart} - 1)));    
+    }
+ 
+    @media (min-width: $deskBP){
+        width: calc((#{$deskColumnWidth} * (#{$gridEnd} - #{$gridStart})) + (#{$deskColumnGap} * (#{$gridEnd} - #{$gridStart} - 1)));    
+    }
+
+    @media (min-width: $xlBP){
+        width: calc(#{$xlSidePadding} + (#{$deskColumnWidth} * (#{$gridEnd} - #{$gridStart})) + (#{$deskColumnGap} * (#{$gridEnd} - #{$gridStart} - 1)));    
+    }
+}
+ */

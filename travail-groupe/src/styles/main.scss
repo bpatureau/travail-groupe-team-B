@@ -1,0 +1,29 @@
+/* SCSS imports */
+@import 'variables/variables';
+@import 'utils/normalize';
+@import 'utils/grids';
+
+
+/* import your style files below */
+//all components files
+@import 'components/texts';
+@import 'components/btn';
+@import 'components/img';
+
+//all layout files
+@import 'layout/wrapper';
+@import 'layout/header';
+@import 'layout/hero';
+
+//side pages layout. You can remove it if you want to
+@import 'layout/sides/ui';
+@import 'layout/sides/typos';
+@import 'layout/sides/colors';
+@import 'layout/sides/buttons';
+@import 'layout/sides/credits';
+
+
+/* make sure this import stayed below all */
+@import 'utils/globalClass';
+
+/* if you just us css and not scss, delete all import above this comment and just write css here instead */

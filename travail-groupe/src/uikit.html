@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI KIT | Webpack project template</title>
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- FAVICON -->
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="../assets/favicon/safari-pinned-tab.svg" color="#00aba9">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- METATAGS -->
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Change your title name here">
+  <meta name="description" content="Change your description here. That what would appen when we see a thumbnail of you website on socials or google">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://changetheurlhere.io/">
+  <meta property="og:title" content="JACQMIN Lua | Webpack project template">
+  <meta property="og:description" content="Change your description here. That what would appen when we see a thumbnail of you website on socials or google">
+  <meta property="og:image" content="./assets/logo/meta-img.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://changetheurlhere.io/">
+  <meta property="twitter:title" content="Change your title name here">
+  <meta property="twitter:description" content="Change your description here. That what would appen when we see a thumbnail of you website on socials or google">
+  <meta property="twitter:image" content="./assets/logo/meta-img.png">
+</head>
+<body data-page="uikit">
+  <header id="header" class="header">
+    <h1 class="title header__title header__logo"><a class="header__linkLogo" href="../index.html">WPT</a></h1>
+    <button id="menuBTN" class="nav__menuBtn">Menu</button>
+    <nav id="nav" class="nav">
+      <ul class="nav__list">
+        <li class="nav__items"><a class="link nav__link" href="index.html">Home</a></li>
+        <li class="nav__items"><a class="link nav__link" href="uikit.html">UI kit</a></li>
+        <li class="nav__items"><a class="link nav__link" href="credits.html">Credits</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="wrapper wrapper--full">
+      <div class="hero">
+        <h2 class="title title--centered hero__title">Ui Kit</h2>
+        <p class="hero__pg">Here you'll find all the stylised elements I usually use for building websites.</p>
+        <p class="hero__pg">For each element, I'll give you the class I use. If you want to change the appearance of an element, just search the assigned class and change the property as you want</p>
+        <p class="hero__pg">Then don't forget to apply class name if you build new pages.</p>
+      </div>
+    </section>
+    <section class="uiTypo">
+        <h2 class="title title--3xl ui__title uiTypo__title">Typography</h2>
+        <div class="uiTypo__card uiTypo__card--long">
+          <h3 class="title title--6xl">Section title</h3>
+          <div class="uiTypo__infos">
+            <p class="ui__pg">Silhouetto</p>
+            <p class="ui__pg">7.478rem</p>
+            <p class="ui__class uiTypo__class">.title .title--6xl</p>
+          </div>
+        </div>
+        <div class="uiTypo__card uiTypo__card--left">
+          <h3 class="title title--3xl">Title</h3>
+          <div class="uiTypo__infos">
+            <p class="ui__pg">Silhouetto</p>
+            <p class="ui__pg">4.209rem</p>
+            <p class="ui__class uiTypo__class">.title .title--3xl</p>
+          </div>
+        </div>
+        <div class="uiTypo__card uiTypo__card--right">
+          <h3 class="title title--2xl title--sub">Subtitle</h3>
+          <div class="uiTypo__infos">
+            <p class="ui__pg">Silhouetto</p>
+            <p class="ui__pg">3.157rem</p>
+            <p class="ui__class">.title .title--sub .title--2xl</p>
+          </div>
+        </div>
+        <div class="uiTypo__card uiTypo__card--left">
+          <h3 class="pg">Paragraph</h3>
+          <div class="uiTypo__infos">
+            <p class="ui__pg">FogtwoNo5</p>
+            <p class="ui__pg">20px</p>
+            <p class="ui__class">.pg (not mandatory)</p>
+          </div>
+        </div>
+        <div class="uiTypo__card uiTypo__card--right">
+          <h3 class="pg--alternate">Alternate paragraph</h3>
+          <div class="uiTypo__infos">
+            <p class="ui__pg">FogtwoNo5</p>
+            <p class="ui__pg">20px</p>
+            <p class="ui__class">.pg--alternate</p>
+          </div>
+        </div>
+        <div class="uiTypo__card uiTypo__card--left">
+          <h3 class="small">Small</h3>
+          <div class="uiTypo__infos">
+            <p class="ui__pg">FogtwoNo5</p>
+            <p class="ui__pg">0.75rem</p>
+            <p class="ui__class">.small</p>
+          </div>
+        </div>
+        <div class="uiTypo__card uiTypo__card--right">
+          <div class="uiTypo__multiple">
+            <h3 class="link">Link</h3>
+            <p class="link link--hover">Link hovered</p>
+            <p class="link link--active">Link active</p>
+            <p class="link link--visited">Link visited</p>
+          </div>
+          <div class="uiTypo__infos">
+            <p class="ui__pg">FogtwoNo5</p>
+            <p class="ui__pg">20px</p>
+            <p class="ui__class">.link</p>
+          </div>
+        </div>
+    </section>
+    <section class="colors">
+      <h2 class="title title--3xl ui__title colors__title">Colors</h2>
+      <div class="colors__palette">
+        <h3 class="title--2xl ui__title colors__title--2">Basics</h3>
+        <div class="colors__card">
+          <p class="ui__pg">Black</p>
+          <p class="ui__pg small">#001A28</p>
+          <span class="colors__sample colors__black"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">White</p>
+          <p class="ui__pg small">#ffffff</p>
+          <span class="colors__sample colors__white"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">Grey 1</p>
+          <p class="ui__pg small">#f6f6f6</p>
+          <span class="colors__sample colors__grey--1"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">Grey 2</p>
+          <p class="ui__pg small">#d6d6d6</p>
+          <span class="colors__sample colors__grey--2"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">Grey 3</p>
+          <p class="ui__pg small">#b1b1b1</p>
+          <span class="colors__sample colors__grey--3"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">Grey 4</p>
+          <p class="ui__pg small">#afafaf</p>
+          <span class="colors__sample colors__grey--4"></span>
+        </div>
+      </div>
+      <div class="colors__palette colors__palette--start">
+        <h3 class="title--2xl ui__title colors__title--2">Primary</h3>
+        <div class="colors__card">
+          <p class="ui__pg">Color--1</p>
+          <p class="ui__pg small">#3F522C</p>
+          <span class="colors__sample colors__color--1"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">color--1darker</p>
+          <p class="ui__pg small">#192112</p>
+          <span class="colors__sample colors__color--1darker"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">color--1lighter</p>
+          <p class="ui__pg small">#7FA659</p>
+          <span class="colors__sample colors__color--1lighter"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">color--1saturate</p>
+          <p class="ui__pg small">#3F522C</p>
+          <span class="colors__sample colors__color--1saturate"></span>
+        </div>
+      </div>
+      <div class="colors__palette colors__palette--start">
+        <h3 class="title--2xl ui__title colors__title--2">Secondary</h3>
+        <div class="colors__card">
+          <p class="ui__pg">Color--2</p>
+          <p class="ui__pg small">#006197</p>
+          <span class="colors__sample colors__color--2"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">color--2darker</p>
+          <p class="ui__pg small">#094769</p>
+          <span class="colors__sample colors__color--2darker"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">color--2lighter</p>
+          <p class="ui__pg small">#77c1e9</p>
+          <span class="colors__sample colors__color--2lighter"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">color--2saturate</p>
+          <p class="ui__pg small">#77c1e9</p>
+          <span class="colors__sample colors__color--2saturate"></span>
+        </div>
+      </div>
+      <div class="colors__palette colors__palette--start">
+        <h3 class="title--2xl ui__title colors__title--2">Tertiary</h3>
+        <div class="colors__card">
+          <p class="ui__pg">Color--3</p>
+          <p class="ui__pg small">#a01d8e</p>
+          <span class="colors__sample colors__color--3"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">color--3darker</p>
+          <p class="ui__pg small">#570d4d</p>
+          <span class="colors__sample colors__color--3darker"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">color--3lighter</p>
+          <p class="ui__pg small">#e088d5</p>
+          <span class="colors__sample colors__color--3lighter"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">color--3saturate</p>
+          <p class="ui__pg small">#e088d5</p>
+          <span class="colors__sample colors__color--3saturate"></span>
+        </div>
+      </div>
+      <div class="colors__palette colors__palette--start">
+        <h3 class="title--2xl ui__title colors__title--2">Others</h3>
+        <div class="colors__card">
+          <p class="ui__pg">Color--warning</p>
+          <p class="ui__pg small">#f68503</p>
+          <span class="colors__sample colors__color--warning"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">Color--error</p>
+          <p class="ui__pg small">#f60b03</p>
+          <span class="colors__sample colors__color--error"></span>
+        </div>
+        <div class="colors__card">
+          <p class="ui__pg">Color--valid</p>
+          <p class="ui__pg small">#03f64c</p>
+          <span class="colors__sample colors__color--valid"></span>
+        </div>
+      </div>
+    </section>
+    <section class="buttons">
+      <h2 class="title title--3xl ui__title buttons__title">Buttons</h2>
+      <div class="buttons__card buttons__card--left">
+        <button class="btn">Button</button>
+        <div class="buttons_infos">
+          <p class="ui__pg">Text color: color--1darker</p>
+          <p class="ui__pg">Background Color: color--1lighter</p>
+          <p class="ui__class">.btn</p>
+        </div>
+      </div>
+      <div class="buttons__card buttons__card--right">
+        <button class="btn btn--hover">Button hovered</button>
+        <div class="buttons_infos">
+          <p class="ui__pg">Text color: color--1lighter</p>
+          <p class="ui__pg">Background Color: color--1saturate</p>
+          <p class="ui__class">.btn:hover</p>
+        </div>
+      </div>
+      <div class="buttons__card buttons__card--left">
+        <button class="btn btn--active">Button active</button>
+        <div class="buttons_infos">
+          <p class="ui__pg">Text color: white</p>
+          <p class="ui__pg">Background Color: color--1darker</p>
+          <p class="ui__class">.btn:active</p>
+        </div>
+      </div>
+      <div class="buttons__card buttons__card--right">
+        <button class="btn btn--disabled">Button disabled</button>
+        <div class="buttons_infos">
+          <p class="ui__pg">Text color: grey--4</p>
+          <p class="ui__pg">Background Color: grey--3</p>
+          <p class="ui__class">.btn:disabled</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+<script id="scriptTag" src="scripts/bundle.js"></script>
+</html>

@@ -1,0 +1,84 @@
+/* you can delete me I am just here on aesthetic purpose */
+.uiTypo{
+  @include grid;
+  @include topPadding(80px);
+  
+  &__title{
+    @include gridWidth(1, 4);
+    word-break: break-all;
+
+    @media (min-width: $tabletBP){
+      @include gridWidth(1, 8);
+    }
+    
+    @media (min-width: $deskBP){
+      @include gridWidth(1, 12);
+    } 
+  }
+
+  &__card{
+    @include padding(24px);
+    background-color: $white;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+
+    @media (min-width: $tabletBP){
+
+    }
+    
+    @media (min-width: $deskBP){
+      flex-flow: row;
+      justify-content: space-between;
+    } 
+
+    &--left{
+      @include gridWidth(1, 4);
+
+      @media (min-width: $tabletBP){
+        @include gridWidth(1, 4);
+      }
+      
+      @media (min-width: $deskBP){
+        @include gridWidth(1, 6);
+      } 
+    }
+
+    &--right{
+      @include gridWidth(1, 4);
+
+      @media (min-width: $tabletBP){
+        @include gridWidth(5, 4);
+      }
+      
+      @media (min-width: $deskBP){
+        @include gridWidth(7, 6);
+      } 
+    }
+
+    &--long{
+      @include gridWidth(1, 4);
+
+      @media (min-width: $tabletBP){
+        @include gridWidth(1, 8);
+      }
+      
+      @media (min-width: $deskBP){
+        @include gridWidth(1, 12);
+      } 
+    }
+  }
+
+  &__infos{
+    width: 100%;
+    
+    @media (min-width: $deskBP){
+      @include columnsWidth(2)
+    } 
+  }
+
+  &__multiple{
+    display: flex;
+    flex-flow: column;
+  }
+}

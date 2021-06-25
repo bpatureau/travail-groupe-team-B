@@ -1,0 +1,19 @@
+/* you can delete me I am just here on aesthetic purpose */
+.ui{
+  &__class{
+    font-family: $font--ui;
+    color: $color--1lighter;
+  }
+
+  &__pg{
+    font-family: $font--ui;
+    color: $black;
+  }
+
+  &__title{
+    font-family: $font--ui;
+    color: $black;
+    font-weight: 400;
+    margin-bottom: 48px;
+  }
+}

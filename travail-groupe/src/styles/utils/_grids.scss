@@ -1,0 +1,209 @@
+/* dont change these variable, they'll adapt automatically based on mesures available in gridsVariables.scss */
+// calculate the width of each column
+$xlColumnWidth : calc(((100vw - (#{$xlSidePadding} * 2)) - (#{$deskNmOfColumns} - 1) * #{$deskColumnGap}) / #{$deskNmOfColumns});
+
+$deskColumnWidth : calc(((100vw - (#{$deskSidePadding} * 2)) - (#{$deskNmOfColumns} - 1) * #{$deskColumnGap}) / #{$deskNmOfColumns});
+
+$tabletColumnWidth :  calc(((100vw - (#{$tabletSidePadding} * 2)) - (#{$tabletNmOfColumns} - 1) * #{$tabletColumnGap}) / #{$tabletNmOfColumns});
+
+$mobileColumnWidth : calc(((100vw - (#{$mobileSidePadding} * 2)) - (#{$mobileNmOfColumns} - 1) * #{$mobileColumnGap}) / #{$mobileNmOfColumns});
+
+/*------------MIXINS--------------*/
+
+/* adding padding on sides. Don't use it with grid mixin */
+@mixin sidePadding($pad){
+    padding-left : $pad;
+    padding-right : $pad;
+    box-sizing: border-box;
+}
+
+@mixin padding($pad){
+    padding : $pad;
+    box-sizing: border-box;
+}
+
+@mixin topPadding($pad){
+    padding-top : $pad;
+    padding-bottom : $pad;
+    box-sizing: border-box;
+}
+
+
+@mixin sideMargin($margin){
+    margin-left : $margin;
+    margin-right : $margin;
+}
+
+@mixin topMargin($margin){
+    margin-top : $margin;
+    margin-bottom : $margin;
+}
+
+@mixin margin($margin){
+    margin : $margin;
+}
+
+/* apply a grid based on the mesures you set in GridsVariable.scss */
+@mixin grid {
+    width: 100vw;
+    display: grid;
+
+    grid-template-columns: repeat($mobileNmOfColumns, 1fr);
+    grid-column-gap: $mobileColumnGap;
+    grid-row-gap: $mobileRowGap;
+
+    padding-left: $mobileSidePadding;
+    padding-right: $mobileSidePadding;
+    box-sizing: border-box;
+
+    @media (min-width: $tabletBP){
+        grid-template-columns: repeat($tabletNmOfColumns, 1fr);
+        grid-column-gap: $tabletColumnGap;
+        grid-row-gap: $tabletRowGap;
+
+        padding-left: $tabletSidePadding;
+        padding-right: $tabletSidePadding;
+    }
+
+    @media (min-width: $deskBP){
+        grid-template-columns: repeat($deskNmOfColumns, 1fr);
+        grid-column-gap: $deskColumnGap;
+        grid-row-gap: $deskRowGap;
+
+        padding-left: $deskSidePadding;
+        padding-right: $deskSidePadding;
+    }
+
+    @media (min-width: $xlBP){
+        width: $xlBP;
+        padding-left: $xlSidePadding;
+        padding-right: $xlSidePadding;
+    }
+}
+
+/* place an element using column layout. */
+//Gridstart = on which column place the beggining of the element.
+//Span = width based on number of column
+@mixin gridColumn($gridStart, $span){
+    grid-column: $gridStart/ span $span;
+}
+
+/* set width of an element based on the grid columns. Size rendered in pixels*/
+//example : columnsWidth(6) set the size of an element as if it would take 6 columns width on the grid. 
+@mixin columnsWidth($numCol){
+    width: calc((#{$mobileColumnWidth} * #{$numCol}) + (#{$mobileColumnGap} * (#{$numCol} - 1)));
+
+    @media (min-width: $tabletBP){
+        width: calc((#{$tabletColumnWidth} * #{$numCol}) + (#{$tabletColumnGap} * (#{$numCol} - 1)));
+    }
+
+    @media (min-width: $deskBP){
+        width: calc((#{$deskColumnWidth} * #{$numCol}) + (#{$deskColumnGap} * (#{$numCol} - 1)));
+    }
+
+    @media (min-width: $xlBP){
+        width: calc((#{$xlColumnWidth} * #{$numCol}) + (#{$deskColumnGap} * (#{$numCol} - 1)));
+    }
+}
+
+/* set width of an element based on the grid columns. Size rendered in pixels*/
+//example : columnsWidth(6) set the size of an element as if it would take 6 columns and 6 gaps width on the grid. 
+@mixin columnsWidthPlusOneGap($numCol){
+    width: calc((#{$mobileColumnWidth} * #{$numCol}) + (#{$mobileColumnGap} * #{$numCol}));
+
+    @media (min-width: $tabletBP){
+        width: calc((#{$tabletColumnWidth} * #{$numCol}) + (#{$tabletColumnGap} * #{$numCol}));
+    }
+
+    @media (min-width: $deskBP){
+        width: calc((#{$deskColumnWidth} * #{$numCol}) + (#{$deskColumnGap} * #{$numCol}));
+    }
+
+    @media (min-width: $xlBP){
+        width: calc((#{$xlColumnWidth} * #{$numCol}) + (#{$deskColumnGap} * #{$numCol}));
+    }
+}
+
+/* set a classic grid-column + make sure the element takes all the width it could*/
+@mixin gridWidth($gridStart, $span){
+    grid-column: $gridStart/ span $span;
+
+    width: calc((#{$mobileColumnWidth} * #{$span}) + (#{$mobileColumnGap} * (#{$span} - 1)));
+
+    @media (min-width: $tabletBP){
+        width: calc((#{$tabletColumnWidth} * #{$span}) + (#{$tabletColumnGap} * (#{$span} - 1)));
+    }
+
+    @media (min-width: $deskBP){
+        width: calc((#{$deskColumnWidth} * #{$span}) + (#{$deskColumnGap} * (#{$span} - 1)));
+    }
+
+    @media (min-width: $xlBP){
+        width: calc((#{$xlColumnWidth} * #{$span}) + (#{$deskColumnGap} * (#{$span} - 1)));
+    }
+}
+
+/* display visual grid */
+.grid{
+    height: 100%;
+    width: 100vw;
+    position : fixed;
+    top : 0;
+    left : 0;
+    pointer-events: none;
+
+    transform-origin: top;
+    animation-name: grow;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+
+    background-color: transparent;
+
+    z-index: 300000;
+
+    li{
+        background-color: rgba(84, 95, 199, 0.055);
+        border: 1px solid rgba(84, 96, 199, 0.493);
+        list-style-type: none;
+        opacity : .5;
+    }
+
+    &__desk{
+        @include grid;
+        height: 100%;
+        margin : 0;
+
+        @media (max-width:1000px){
+            display: none;
+        }
+    }
+
+    &__tablet{
+        @include grid;
+        height: 100%;
+        margin : 0;
+        
+        display: none;
+        @media screen and (min-width: 600px) and (max-width: 1000px){
+            display: grid;
+        }
+
+    }
+
+    &__mobile{
+        @include grid;
+        height: 100%;
+        margin : 0;
+
+        @media (min-width:600px){
+            display: none;
+        }
+    }
+}
+
+@keyframes grow{
+    from{
+       transform: scaleY(0);
+    }
+}

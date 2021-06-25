@@ -1,0 +1,154 @@
+/* stylised header. Feel free to change everything you want but be aware that
+.header--open
+.nav--open
+.nav__menuBtn--open 
+are used in scripts/functions/menu.js to open and close menu
+*/
+.header{
+  @include grid;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  color: $grey--1;
+  z-index: 50;
+
+  pointer-events: none;
+
+  background-color: transparent;
+
+  &--open{
+    background-color: $color--1darker;
+    pointer-events: initial;
+  }
+
+  &__title{
+    @include gridColumn(1, 2);
+    margin-top:  $deskRowGap;
+
+    display: block;
+    width: 35px;
+    height: 35px;
+    pointer-events: initial;
+  }
+
+  &__logo{
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    background-image: url('@/logo/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__linkLogo{
+    display: block;
+    width: 100%;
+    height: 100%
+  }
+}
+
+.nav{
+  @include gridWidth(1, 4);
+  color: $grey--1;
+  position: relative;
+  opacity: 0;
+  transition : opacity .2s ease-out;
+
+  @media (min-width: $tabletBP){
+    @include gridWidth(1, 8);
+  }
+  
+  @media (min-width: $deskBP){
+    @include gridWidth(1, 12);
+  }
+
+  &--open{
+   opacity: 1;
+  }
+
+  &__menuBtn{
+    position: absolute;
+    top: calc(#{$mobileRowGap} + 35px/2);
+    right: $mobileSidePadding;
+
+    color: $color--1;
+    font-size: $fontsize--m;
+
+    pointer-events: initial;
+    cursor: pointer;
+
+    @media (min-width: $tabletBP){
+      top: calc(#{$tabletRowGap} + 35px/2);
+      right: $tabletSidePadding;
+    }
+    
+    @media (min-width: $deskBP){
+      top: calc(#{$deskRowGap} + 35px/2);
+      right: $deskSidePadding;
+    }
+
+    &::after{
+      content: "";
+      width: 0;
+      height: 0;
+      border-radius: 100%;
+      border: 1px solid transparent;
+
+      position: absolute;
+      top: 50%; left: 50%;
+      transform : translate(-50%, -50%);
+
+      transition : all .2s linear;
+    }
+
+    &:hover{
+      &::after{
+        width: 35px;
+        height: 35px;
+        border: 1px solid $color--1lighter;
+      }
+    }
+    
+    &--open{
+      color: $grey--1;
+    }
+  }
+  
+  &__link{
+    margin: $deskRowGap;
+    font-size: $fontsize--2xl;
+
+    @media (min-width: $tabletBP){
+      font-size: $fontsize--3xl;
+    }
+    
+    @media (min-width: $deskBP){
+      font-size: $fontsize--4xl;
+    }
+    
+    &::before{
+      border-bottom: 2px solid $grey--1;
+    }
+  
+    &:visited{
+      color: $color--1lighter;
+    }
+  
+    &:hover{
+      color: $white;
+    }
+  
+    &:active{
+      color: $color--1lighter;
+  
+      &::before{
+        width: 100%;
+        border-bottom: 2px solid $color--1lighter;
+      }
+    }
+  
+  }
+}

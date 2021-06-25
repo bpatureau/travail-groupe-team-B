@@ -1,0 +1,11 @@
+.wrapper{
+  @include topPadding(80px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--full{
+    min-height: 100vh;
+  }
+}

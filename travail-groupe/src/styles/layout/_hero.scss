@@ -1,0 +1,69 @@
+.hero{
+  @include grid;
+
+  &__title{
+    @include gridWidth(1, 4);
+
+    grid-row: 1;
+    font-size: $fontsize--4xl;
+
+    @media (min-width: $tabletBP){
+      @include gridWidth(1, 8);
+      font-size: $fontsize--6xl;
+    }
+
+    @media (min-width: $deskBP){
+      @include gridWidth(1, 12);
+
+    }
+  }
+
+  &__pg{
+    @include gridWidth(1, 4);
+    text-align: center;
+
+    @media (min-width: $tabletBP){
+      @include gridWidth(3, 4);
+    }
+
+    @media (min-width: $deskBP){
+      @include gridWidth(4, 6);
+    }
+  }
+
+  &__images{
+    @include gridColumn(1, 4);
+    grid-row: 2;
+
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    align-self: center;
+    justify-self: center;
+
+    @media (min-width: $tabletBP){
+      @include gridWidth(1, 8);
+    }
+
+    @media (min-width: $deskBP){
+      @include gridWidth(1, 12);
+    }
+  }
+
+  &__img{
+    @include columnsWidth(4);
+    margin: 12px;
+
+    flex-shrink: 0;
+
+    @media (min-width: $tabletBP){
+      @include gridWidth(1, 4);
+    }
+
+    @media (min-width: $deskBP){
+      @include gridWidth(1, 6);
+    }
+  }
+}

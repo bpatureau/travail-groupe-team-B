@@ -1,0 +1,73 @@
+/* stylise buttons and other cta here */
+// you can find a blank version of .btn class below
+.btn{
+  @include columnsWidth(2);
+  height: calc(#{$mobileRowGap} * 3);
+  background-color: $color--1lighter;
+  font-size: $fontsize--r;
+  color: $color--1darker;
+
+  transition: .2s all ease-in;
+  cursor: pointer;
+
+  @media (min-width: $tabletBP){
+    height: calc(#{$tabletRowGap} * 3);
+  }
+  
+  @media (min-width: $deskBP){
+    height: calc(#{$deskRowGap} * 3);
+  }
+
+  &:hover{
+    background-color: $color--1saturate;
+    color: $color--1lighter;
+  }
+
+  &:active{
+    background-color: $color--1darker;
+    color: $white;
+  }
+
+  &:disabled{
+    pointer-events: none;
+    background-color: $grey--3;
+    color: $grey--4;
+  }
+
+  /* just for UI KIT */
+  &--hover{
+    background-color: $color--1saturate;
+    color: $color--1lighter;
+  }
+
+  &--active{
+    background-color: $color--1darker;
+    color: $white;
+  }
+
+  &--disabled{
+    pointer-events: none;
+    background-color: $grey--3;
+    color: $grey--4;
+  }
+}
+
+
+/* blank class version */
+/* 
+.btn{
+  @media (min-width: $tabletBP){
+  }
+  
+  @media (min-width: $deskBP){
+  }
+
+  &:hover{
+  }
+
+  &:active{
+  }
+
+  &:disabled{
+  }
+} */

@@ -1,0 +1,154 @@
+/* stylise paragraph, links and title here */
+// you can find a blank version of .link class below
+body{
+  font-family: $font--1;
+  font-size: $fontsize--r;
+  background-color: $grey--1;
+  line-height: 1.4;
+  color: $color--1darker;
+
+  p{
+    @include topMargin(8px)
+  }
+}
+
+/* TITLES */
+.title{
+  font-family: $font--2;
+  font-size: $fontsize--m;
+  color: $color--1;
+
+  &--l{
+    font-size: $fontsize--l;
+  }
+
+  &--xl{
+    font-size: $fontsize--xl;
+  }
+
+  &--2xl{
+    font-size: $fontsize--2xl;
+  }
+
+  &--3xl{
+    font-size: $fontsize--3xl;
+  }
+
+  &--4xl{
+    font-size: $fontsize--4xl;
+  }
+
+  &--5xl{
+    font-size: $fontsize--5xl;
+  }
+
+  &--6xl{
+    font-size: $fontsize--6xl;
+  }
+
+  &--centered{
+    text-align: center;
+  }
+
+  &--sub{
+    color: $color--1saturate;
+  }
+}
+
+/* TEXT */
+.pg{
+  &--alternate{
+    color: $color--1lighter;
+  }
+}
+
+.small{
+  font-size: $fontsize--s;
+}
+
+/* LINKS */
+.link{
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  font-size: $fontsize--r;
+  font-weight: 700;
+  color: $color--1lighter;
+  position: relative;
+
+  transition: transform .2s linear;
+
+  &::before{
+    content: "";
+    width: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+  
+    border-bottom: 2px solid $color--1lighter;
+    transition: width .2s ease-in;
+  }
+
+  &:visited{
+    color: $color--1saturate;
+  }
+
+  &:hover{
+    transform: scale(1.05);
+    color: $color--1lighter;
+    
+    &::before{
+      width: 100%;
+    }
+  }
+
+  &:active{
+    transform: scale(1.2);
+    color: $color--1darker;
+
+    &::before{
+      width: 100%;
+      border-bottom: 2px solid $color--1darker;
+    }
+  }
+
+
+  /* just for ui KIT */
+  &--visited{
+    color: $color--1saturate;
+  }
+
+  &--hover{
+    transform: scale(1.05);
+    color: $color--1lighter;
+    
+    &::before{
+      width: 100%;
+    }
+  }
+
+  &--active{
+    transform: scale(1.2);
+    color: $color--1darker;
+
+    &::before{
+      width: 100%;
+      border-bottom: 2px solid $color--1darker;
+    }
+  }
+
+}
+
+/* blank link class versions */
+/* .link{
+
+  &:visited{
+  }
+
+  &:hover{
+  }
+
+  &:active{
+  }
+} */

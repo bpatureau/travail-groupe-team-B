@@ -1,0 +1,105 @@
+/* imports */
+@font-face {
+  font-family: "FogtwoNo5";
+  src: url("@/fonts/FogtwoNo5.ttf");
+}
+
+@font-face {
+  font-family: "Silhouetto";
+  src: url("@/fonts/Silhouetto-Script.ttf");
+}
+
+/* FONTS */
+$font--1 : 'FogtwoNo5', serif;
+$font--2 : 'Silhouetto', cursive;
+$font--ui: 'Arial', sans-serif;
+
+/* FONT SIZE */
+//the ratio is 1.333.
+//you can just chose fontsize-r size and others will adapt automatically
+//written size  if $fontsize--r id 16
+
+$fontsize--s : 0.75rem; //12px
+$fontsize--r : 20px;
+$fontsize--m : 1.333rem; //21.33px 
+$fontsize--l : 1.777rem; //28.43px
+$fontsize--xl : 2.369rem; //37.90
+$fontsize--2xl : 3.157rem; //50.52
+$fontsize--3xl: 4.209rem; //67.34px
+$fontsize--4xl : 5.61rem; // 89.76px
+$fontsize--5xl: 7.478rem; //119.66px
+$fontsize--6xl: 9.969rem; //159.50px
+
+
+/* COLORS */
+//blacks and whites
+$black: #001A28;
+$white: rgb(245, 245, 245);
+$grey--1: darken($white, 3%);
+$grey--2: darken($white, 10%);
+$grey--3: darken($white, 30%);
+$grey--4: darken($white, 50%);
+
+//primary color and alterations
+$color--1: #3F522C;
+$color--1darker: darken($color--1, 15%);
+$color--1lighter: lighten($color--1, 50%);
+$color--1saturate: saturate($color--1, 80%); //sometime base color is already 100% saturate. you can try desaturate instead of saturate function
+
+//secondary color and alterations
+$color--2: #247eaf;
+$color--2darker: darken($color--2, 15%);
+$color--2lighter: lighten($color--2, 50%);
+$color--2saturate: saturate($color--2, 80%); 
+
+
+//tertiary color and alterations
+$color--3: #a01d8e;
+$color--3darker:  darken($color--3, 15%);
+$color--3lighter: lighten($color--3, 50%);
+$color--3saturate: saturate($color--3, 80%);
+
+//others 
+$color--warning : #e6a55c;
+$color--error :  #e75a55;
+$color--valid :  #7aecaa;
+
+/* Grid variables. Feel free to modidy them to fit your design */
+//please dont delete all these variables unless you also delete grids.scss, otherwise it will cause a lot of error due to the fact I use these a lot
+//breakpoints
+$xlBP : 1700px;
+$deskBP : 1000px;
+$tabletBP : 600px;
+
+//column and row gaps that can be changed regarding the size of the device
+$deskColumnGap : 24px;
+$deskRowGap : 16px;
+$tabletColumnGap : 24px;
+$tabletRowGap : 16px;
+$mobileColumnGap : 24px;
+$mobileRowGap : 16px;
+
+
+//side padding that can be changed regarding the size of the device
+$xlSidePadding : calc((100vw - #{$xlBP})/2);
+$deskSidePadding : 10vw; 
+$tabletSidePadding : 10vw;
+$mobileSidePadding : 15vw;
+
+//numbers of columns that can be changed regarding the size of the device
+$deskNmOfColumns : 12;
+$tabletNmOfColumns : 8;
+$mobileNmOfColumns : 4;
+
+/* OTHERS */
+
+//media queries with breakpoint
+/* 
+@media (min-width: $tabletBP){
+
+}
+
+@media (min-width: $deskBP){
+  
+} 
+*/
