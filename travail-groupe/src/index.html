@@ -35,33 +35,15 @@
   <meta property="twitter:title" content="Change your title name here">
   <meta property="twitter:description" content="Change your description here. That what would appen when we see a thumbnail of you website on socials or google">
   <meta property="twitter:image" content="./assets/logo/meta-img.png">
+  <link rel="stylesheet" href="/node_modules/bulma/css/bulma.css">
 </head>
-<body data-page="1">
-  <header id="header" class="header">
-    <h1 class="title header__title header__logo"><a class="header__linkLogo" href="./index.html">WPT</a></h1>
-    <button id="menuBTN" class="nav__menuBtn">Menu</button>
-    <nav id="nav" class="nav">
-      <ul class="nav__list">
-        <li class="nav__items"><a class="link nav__link" href="index.html">Home</a></li>
-        <li class="nav__items"><a class="link nav__link" href="uikit.html">UI kit</a></li>
-        <li class="nav__items"><a class="link nav__link" href="credits.html">Credits</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="wrapper wrapper--full">
-      <div class="hero">
-        <h2 class="title title--centered hero__title">Welcome !</h2>
-        <div class="hero__images">
-          <img class="hero__img" src="assets/img/work-1.jpg" alt="">
-          <img class="hero__img" src="assets/img/work.jpg" alt="">
-          <img class="hero__img" src="assets/img/work-2.jpg" alt="">
-        </div>
-        <p class="hero__pg">Please <a class="link" href="https://github.com/LuaJacqmin/webpack-project-template-LJ#readme" target="_blank" rel="noopener noreferrer">read the doc</a> and have fun</p>
-        <p class="hero__pg">Also, check out the <a class="link" href="uikit.html" target="_blank" rel="noopener noreferrer">UI kit</a></p>
-      </div>
-    </section>
-  </main>
+<body data-page="1" class="container "> 
+  <form action="" class="form">
+    <input type="text" class="input">
+    <button class="button is-primary">envoyer</button>
+  </form>
+  <button class="button delete is-danger">supprimer</button>
+  <ul class="historique"></ul>  
 </body>
-<script id="scriptTag" src="./scripts/bundle.js"></script>
+<script id="scriptTag" src="./scripts/index.js"></script>
 </html>
